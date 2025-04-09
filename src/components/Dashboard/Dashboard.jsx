@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
+import BookSearch from '../BookSearch/BookSearch';
 
 import { UserContext } from '../../contexts/UserContext';
 
@@ -23,14 +24,7 @@ const Dashboard = () => {
   return (
     <main>
       <h1>Welcome, {user.username}</h1>
-      <p>
-        This is the dashboard page where you can see a list of all the users.
-      </p>
-      <ul>
-        {users.map(user => (
-          <li key={user._id}>{user.username}</li>
-        ))}
-      </ul>
+      <BookSearch />
     </main>
   );
 };
